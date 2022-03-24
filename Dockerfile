@@ -6,7 +6,7 @@ WORKDIR /work
 RUN apt-get update
 RUN apt-get install -y python3-pip
 # install jupyter
-RUN python3 -m pip install jupyter jupyterlab
+RUN python3 -m pip install jupyter jupyterlab jupyterhub
 
 # Run jupyter
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8080", "--allow-root"]
